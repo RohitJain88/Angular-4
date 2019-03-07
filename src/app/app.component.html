@@ -1,0 +1,69 @@
+<!-- Handling Null Object -->
+<!-- Method 1: Using ngIf -->
+<!-- <h1 *ngIf="post.comment">{{ post.comment.social }}</h1> -->
+<!-- Method 2:Using Safe traversal Operator -->
+<!-- <h1>{{ post.comment?.formal }}</h1> -->
+
+<!-- Custom attribute with the custom directive -->
+<!-- <input type="text" appInputContactFormat [format]="'upper'"/> -->
+
+<!-- Custom directive with attribute same as directive name -->
+<!-- <input type="text" appInputContactFormat="'lower'"/> -->
+
+<!--  "Input Property" -->
+<!-- <courses [isFavorite]='post.isFavorite'></courses><br /> -->
+
+<!-- <movies ></movies> -->
+<!-- <input type="checkbox" *ngIf="isMulti"> -->
+
+<!-- Passing data between Components (Reusable Component) with Input/Output properties -->
+<!-- <favorite [isFavorite]='post.isFavorite' (change)='onFavoriteChanged($event)'></favorite>
+<span
+  class="glyphicon"
+  [class.glyphicon-user]=true
+  (click)="onUserClick()"
+>
+</span> -->
+
+
+<!-- ng-content html view -->
+<!-- <bootstrap-panel>
+    <ng-container class="heading">Heading</ng-container>
+    <div class="body">
+        <h2>Body</h2>
+        <p>Some content here....</p>
+    </div>
+</bootstrap-panel> -->
+
+<!-- Directives -->
+<app-course></app-course>
+
+<!-- ngStyle Directive -->
+<!-- Without ngStyle, using style binding -->
+<!-- <button
+  [style.backgroundColor]="canSave ? 'blue' : 'gray'"
+  [style.color]="canSave ? 'white' : 'black'"
+  [style.fontWeight]="canSave ? 'bold' : 'normal'"
+>
+Save
+</button> -->
+
+<!-- Using ngStyle -->
+<!-- <button
+  [ngStyle]="{
+    'backgroundColor': canSave ? 'blue' : 'gray',
+    'color': canSave ? 'white' : 'black',
+    'fontWeight': canSave ? 'bold' : 'normal'
+  }"  
+>
+Save
+</button> -->
+
+<div class="container">
+    app component
+    <br>
+    <br>
+    
+    <app-side-bar-toggle [sideBar]="sideBar"></app-side-bar-toggle>
+    <app-side-bar #sideBar></app-side-bar>
+</div>
